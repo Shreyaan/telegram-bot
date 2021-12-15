@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/Shreyaan/telegram-bot#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "telegraf": "^3.38.0"
   }
 }
