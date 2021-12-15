@@ -20,7 +20,7 @@ bot.hears([/trb/, /TRB/, /Trb/, /teeaarbee/], (ctx) => {
   ctx.reply('dont mention trb i hate him')
 })
 
-bot.command(['hello bot',`hi bot`,`Hello bot`,'hello trbhater',`hi trbhater`,`Hello trbhater`,], (ctx)=> 
+bot.hears(['hello bot',`hi bot`,`Hello bot`,'hello trbhater',`hi trbhater`,`Hello trbhater`,], (ctx)=> 
 ctx.reply('Hello ' + ctx.message.from.first_name))
 
 
