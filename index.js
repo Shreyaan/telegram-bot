@@ -6,8 +6,11 @@ const express = require('express')
 
 const TOKEN = process.env.TOKEN
 const URL = process.env.URL
-const PORT = process.env.PORT
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
+var port = process.env.PORT || 8080;
+
+var server=app.listen(port,function() {
+    console.log("app running on port 8080"); });
 
 const bot = new Telegraf(TOKEN)
 bot.start( (ctx) => {
