@@ -8,9 +8,14 @@ const PORT = process.env.PORT
 
 const bot = new Telegraf(TOKEN)
 bot.start( (ctx) => {
-ctx.reply(`at the moment this bot does nothing coz i am still building it hehe`)
+ctx.reply(`if this bot hears u say trb it will intervene`)
 
 })
+
+bot.hears([/trb/,/TRB/ , /Trb/, /teeaarbee/], (ctx) => {
+    ctx.reply('dont mention trb i hate him')})
+
+
 // bot.trb( (ctx) => {
 // ctx.reply(`i hate trb`)
 
