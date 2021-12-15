@@ -11,28 +11,27 @@ var port = process.env.PORT || 8080;
 
 
 const bot = new Telegraf(TOKEN)
-bot.start( (ctx) => {
-ctx.reply(`if this bot hears u say trb it will intervene`)
+bot.start((ctx) => {
+  ctx.reply(`if this bot hears u say trb it will intervene`)
 
 })
 
-bot.hears([/trb/,/TRB/ , /Trb/, /teeaarbee/], (ctx) => {
-    ctx.reply('dont mention trb i hate him')})
+bot.hears([/trb/, /TRB/, /Trb/, /teeaarbee/], (ctx) => {
+  ctx.reply('dont mention trb i hate him')
+})
+
+bot.command(['hello bot',`hi bot`,`Hello bot`,'hello trbhater',`hi trbhater`,`Hello trbhater`,], (ctx)=> 
+ctx.reply('Hello ' + ctx.message.from.first_name))
 
 
-// bot.trb( (ctx) => {
-// ctx.reply(`i hate trb`)
 
-// })
 
 bot.launch()
 
 
 const app = express()
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
