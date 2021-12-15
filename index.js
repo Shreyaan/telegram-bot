@@ -9,8 +9,6 @@ const URL = process.env.URL
 const PORT = process.env.PORT || 8080;
 var port = process.env.PORT || 8080;
 
-var server=app.listen(port,function() {
-    console.log("app running on port 8080"); });
 
 const bot = new Telegraf(TOKEN)
 bot.start( (ctx) => {
@@ -28,3 +26,14 @@ bot.hears([/trb/,/TRB/ , /Trb/, /teeaarbee/], (ctx) => {
 // })
 
 bot.launch()
+
+
+const app = express()
+
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
