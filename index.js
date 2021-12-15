@@ -3,7 +3,7 @@ require('dotenv').config();
 
 
 const TOKEN = process.env.TOKEN
-const SERVER_URL = process.env.SERVER_URL
+const URL = process.env.URL
 const PORT = process.env.PORT
 const port = process.env.PORT || 3000;
 
