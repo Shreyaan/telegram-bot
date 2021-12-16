@@ -25,7 +25,7 @@ bot.hears([/hello bot/,/hi bot/,/Hi bot/,/Hello bot/,/hello trbhater/,/hi trbhat
 ctx.reply('Hello ' + ctx.message.from.first_name))
 
 bot.hears(/@trbhater_bot/, (ctx)=> 
-ctx.reply(`kya hai  @${ctx.message.from.first_name}`))
+ctx.reply('kya hai ' + ctx.message.from.first_name))
 
 bot.hears([/trb/, /TRB/, /Trb/, /teeaarbee/], (ctx) => {
   ctx.reply('dont mention trb i hate him')
