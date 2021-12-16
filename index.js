@@ -13,15 +13,16 @@ var port = process.env.PORT || 8080;
 const bot = new Telegraf(TOKEN)
 bot.start((ctx) => {
   ctx.reply(`if this bot hears u say trb it will intervene`)
-
+  
 })
+
+bot.hears([/hello bot/,/hi bot/,/Hi bot/,/Hello bot/,/hello trbhater/,/hi trbhater/,/Hello trbhater/], (ctx)=> 
+ctx.reply('Hello ' + ctx.message.from.first_name))
 
 bot.hears([/trb/, /TRB/, /Trb/, /teeaarbee/], (ctx) => {
   ctx.reply('dont mention trb i hate him')
 })
 
-bot.hears(['hello bot',`hi bot`,`Hello bot`,'hello trbhater',`hi trbhater`,`Hello trbhater`,], (ctx)=> 
-ctx.reply('Hello ' + ctx.message.from.first_name))
 
 
 
