@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express')
 
 const app = express()
-const expressApp = express()
 
 
 const TOKEN = process.env.TOKEN
@@ -14,8 +13,8 @@ var port = process.env.PORT || 8080;
 
 const bot = new Telegraf(TOKEN)
 bot.telegram.setWebhook(`${URL}/bot${TOKEN}`);
-expressApp.use(bot.webhookCallback(`/bot${TOKEN}`));
-// bot.startWebhook(`/bot${TOKEN}`, null, PORT)
+// expressApp.use(bot.webhookCallback(`/bot${TOKEN}`));
+bot.startWebhook(`/bot${TOKEN}`, null, PORT)
 
 bot.start((ctx) => {
   ctx.reply(`if this bot hears u say trb it will intervene`)
