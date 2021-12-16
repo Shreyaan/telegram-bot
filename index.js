@@ -2,6 +2,8 @@ const Telegraf = require('telegraf')
 require('dotenv').config();
 const express = require('express')
 
+const app = express()
+const expressApp = express()
 
 
 const TOKEN = process.env.TOKEN
@@ -38,7 +40,6 @@ bot.hears([/trb/, /TRB/, /Trb/, /teeaarbee/], (ctx) => {
 bot.launch()
 
 
-const app = express()
 
 
 
