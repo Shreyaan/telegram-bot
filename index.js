@@ -23,13 +23,13 @@ bot.start((ctx) => {
 
 
 bot.hears([/hello bot/,/hi bot/,/Hi bot/,/Hello bot/,/hello trbhater/,/hi trbhater/,/Hello trbhater/,/hi @trbhater_bot/,/Hi @trbhater_bot/,/hello @trbhater_bot/,/Hello @trbhater_bot/], (ctx)=> 
-ctx.reply('Hello ' + ctx.message.from.first_name , Extra.inReplyTo(message_id) ))
+ctx.reply('Hello ' + ctx.message.from.first_name))
 
 bot.hears([/@trbhater_bot/], (ctx)=> 
-ctx.reply('kya hai ' + ctx.message.from.first_name , Extra.inReplyTo(message_id) ))
+ctx.reply('kya hai ' + ctx.message.from.first_name))
 
 bot.hears([/trb/, /TRB/, /Trb/, /teeaarbee/], (ctx) => {
-  ctx.reply('dont mention trb i hate him' , Extra.inReplyTo(message_id))
+  ctx.reply('dont mention trb i hate him')
 })
 
 
